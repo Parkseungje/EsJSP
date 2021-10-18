@@ -13,7 +13,7 @@ public class UserController {
 	@Autowired
 	UserService uService;
 
-	@GetMapping("/")
+	@GetMapping("/json")
 	@ResponseBody
 	public List<UserVO> getUser() {
 		return uService.getUser();
