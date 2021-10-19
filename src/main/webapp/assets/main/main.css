@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+#mainImage{
+    position: absolute;
+    left: 650px;
+    top: 80px;
+}
+
+#mainI{
+	height: 800px;
+}
+
+#menu{
+    position: absolute;
+    right:40px;
+}
+
+.menu1{
+    margin-right: 20px;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+body{
+    background-color:lightcyan;
+
+}
+
+#btn{
+	width: 100px;
+}
+
+@media (max-width: 375px) {
+  .mainI {
+    width: 100px;
+    height: 100px;
+  }
+  
+}

@@ -1,0 +1,32 @@
+@charset "EUC-KR";
+
+#joinForm{
+	margin-left: 600px;
+}
+
+#joinTitle{
+	margin-left: 750px;
+	font-weight: bold;
+	font-size: 20pt;
+}
+
+#submit{
+	margin-top: 20px;
+	margin-left: 120px;
+}
+
+.userInput{
+	width:400px;
+	height:30px;
+}
+
+/* 중복아이디 존재하지 않는경우 */
+.id_input_re_1{
+		color : green;
+		display : none;
+	}
+/* 중복아이디 존재하는 경우 */
+.id_input_re_2{
+		color : red;
+		display : none;
+	}
