@@ -19,4 +19,11 @@
         #{user_email}
         )
     </insert>
+    
+    <!-- 아이디 중복검사 -->
+  	<select id="check" resultType="int">
+  	
+  		select count(*) from t_user where user_id = #{userId}
+  	
+  	</select>
 </mapper>

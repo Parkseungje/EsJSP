@@ -16,4 +16,13 @@ public class UserServiceImpl implements UserService {
 
 		return userMapper.getUser();
 	}
+	
+	public void joinMember(UserVO uservo) {
+		
+		userMapper.joinMember(uservo);
+	}
+	
+	public int idCheck(String userId) {
+		return userMapper.check(userId);
+	}
 }
