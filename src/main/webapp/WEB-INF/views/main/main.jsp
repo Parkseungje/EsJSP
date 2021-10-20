@@ -15,7 +15,7 @@
         <span class="menu1">로그인</span>
     </div>
     <div id="mainImage">
-        <img id="mainI" src="/images/utopia.jpg">
+        <img id="mainI" src="/images/shinpark.jpg">
     </div>
 </body>
 </html>

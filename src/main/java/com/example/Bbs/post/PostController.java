@@ -9,6 +9,6 @@ public class PostController {
 	@GetMapping("/postIn")
 	public String postIn() {
 		
-		return "postIn";
+		return "post/postIn";
 	}
 }

@@ -9,6 +9,6 @@ public class Main {
 
 	@RequestMapping("/")
 	public String main() {
-		return "main";
+		return "main/main";
 	}
 }
