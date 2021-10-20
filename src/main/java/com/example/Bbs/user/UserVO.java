@@ -10,6 +10,8 @@ public class UserVO {
 	private String user_id;
 	//회원패스워드
 	private String user_password;
+	//회원패스워드 체크
+	private String user_password_check;
 	//회원이메일
 	private String user_email;
 	//회원가입일
@@ -22,6 +24,13 @@ public class UserVO {
 	private String user_authority;
 
 
+	
+	public String getUser_password_check() {
+		return user_password_check;
+	}
+	public void setUser_password_check(String user_password_check) {
+		this.user_password_check = user_password_check;
+	}
 	public int getUser_code() {
 		return user_code;
 	}

@@ -20,6 +20,7 @@ public class UserServiceImpl implements UserService {
 	public void joinMember(UserVO uservo) {
 		
 		userMapper.joinMember(uservo);
+		
 	}
 	
 	public int idCheck(String userId) {

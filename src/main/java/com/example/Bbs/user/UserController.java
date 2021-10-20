@@ -27,30 +27,51 @@ public class UserController {
 		return uService.getUser();
 	}
 	
+	// 회원가입폼 이동
 	@GetMapping("/userRegisteration")
 	public String userRegisteration() {
 		
-		return "userRegisteration";
+		return "user/userRegisteration";
 	}
 	
+	// 회원가입기능
 	@PostMapping("/userJoin")
 	public String userJoin(UserVO uservo) {
 		
-		System.out.println(uservo);
-	    uService.joinMember(uservo);
+		String user_id = uservo.getUser_id();
+		String user_name = uservo.getUser_name();
+		String user_email = uservo.getUser_email();
+		String user_password = uservo.getUser_password();
+		String user_password_check = uservo.getUser_password_check();
 		
-		return "userRegisteration";
+		int checkResult = uService.idCheck(user_id);
+		
+		if(checkResult != 0) {
+			
+		}else {
+				
+				if(user_id==null||user_id=="") return "user/userRegisteration";
+				if(user_name==""||user_name==null) return "user/userRegisteration";
+				if(user_email==""||user_email==null)return "user/userRegisteration";
+				if(user_password==""||user_password==null) return "user/userRegisteration";
+				if(user_password_check==""||user_password_check==null) return "user/userRegisteration"; 			
+				
+				uService.joinMember(uservo);		
+					
+		}
+		return "user/userRegisteration";
 	}
 	
+	// 아이디 동적중복체크
 	@PostMapping("/idCheck")
 	@ResponseBody
 	public String idCheck(String userId) {
 		
 		//logger.info("userId진입!!!!!!!!!!!!!!!!");
 		
-		int result = uService.idCheck(userId);
+		int checkResult = uService.idCheck(userId);
 		
-		if(result != 0) {
+		if(checkResult != 0) {
 			return "fail";
 		}else {
 			return "success";
